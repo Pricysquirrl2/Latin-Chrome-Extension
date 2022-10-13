@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Cambridge Latin Course Auto-Translate",
+    "version": "1.0",
+    "description": "Have word translations pop up without having to press them",
+    "content_scripts": [
+        {
+          "js": ["content.js"],
+          "matches": [
+            "https://www.cla.cambridgescp.com/files/*"
+          ]
+        }
+      ],
+    "background": {
+        "service_worker": "background.js"},
+    "permissions": ["activeTab","scripting"],
+    "action": {}
+  }
